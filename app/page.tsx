@@ -1,0 +1,90 @@
+import Link from "next/link";
+
+const topics = [
+  {
+    id: "clt",
+    title: "中心極限定理",
+    subtitle: "Central Limit Theorem",
+    description: "母集団がどんな分布でも、標本平均は正規分布に近づく。その理由を動かして確認する。",
+    tags: ["標本分布", "正規分布", "標準誤差"],
+    href: "/topics/clt",
+    ready: true,
+  },
+  {
+    id: "ci",
+    title: "信頼区間",
+    subtitle: "Confidence Interval",
+    description: "95%信頼区間とは何か。繰り返し標本抽出で体感する。",
+    tags: ["推定", "信頼水準"],
+    href: "/topics/ci",
+    ready: true,
+  },
+  {
+    id: "ht",
+    title: "仮説検定",
+    subtitle: "Hypothesis Testing",
+    description: "p値・有意水準・第一種過誤を視覚的に理解する。",
+    tags: ["p値", "有意水準", "検出力"],
+    href: "/topics/ht",
+    ready: true,
+  },
+];
+
+export default function Home() {
+  return (
+    <div className="max-w-4xl mx-auto px-4 py-12">
+      <div className="mb-10">
+        <h1 className="text-3xl font-bold tracking-tight mb-2" style={{ color: "var(--text-primary)" }}>
+          統計を、動かして学ぶ
+        </h1>
+        <p className="text-base" style={{ color: "var(--text-secondary)" }}>
+          統計検定2級レベルの概念をインタラクティブなグラフで直感的に理解する。
+        </p>
+      </div>
+
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {topics.map((t) => (
+          <div key={t.id} className="panel flex flex-col gap-3 relative">
+            {!t.ready && (
+              <span
+                className="absolute top-3 right-3 text-xs px-2 py-0.5 rounded-full font-medium"
+                style={{ background: "var(--border)", color: "var(--text-secondary)" }}
+              >
+                近日公開
+              </span>
+            )}
+            <div>
+              <div className="panel-title">{t.subtitle}</div>
+              <h2 className="text-lg font-semibold" style={{ color: "var(--text-primary)" }}>
+                {t.title}
+              </h2>
+            </div>
+            <p className="text-sm flex-1" style={{ color: "var(--text-secondary)" }}>
+              {t.description}
+            </p>
+            <div className="flex flex-wrap gap-1.5">
+              {t.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="text-xs px-2 py-0.5 rounded-full"
+                  style={{ background: "var(--accent-light)", color: "var(--accent)" }}
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+            {t.ready ? (
+              <Link href={t.href} className="btn btn-primary mt-1 self-start">
+                学習を始める →
+              </Link>
+            ) : (
+              <button className="btn btn-ghost mt-1 self-start" disabled>
+                準備中
+              </button>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
