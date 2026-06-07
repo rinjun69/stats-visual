@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import Link from "next/link";
 import "./globals.css";
 
 const GA_ID = "G-S6NPCHD98X";
@@ -27,8 +28,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </div>
         </header>
         <main className="flex-1">{children}</main>
-        <footer className="text-center text-xs py-4" style={{ color: "var(--text-secondary)" }}>
-          統計検定2級レベルの概念をインタラクティブに学ぶ
+        <footer className="text-center text-xs py-4 flex flex-col gap-1" style={{ color: "var(--text-secondary)" }}>
+          <span>統計検定2級レベルの概念をインタラクティブに学ぶ</span>
+          <span>
+            <Link href="/privacy" className="underline underline-offset-2 hover:opacity-70" style={{ color: "var(--text-secondary)" }}>
+              プライバシーポリシー
+            </Link>
+          </span>
         </footer>
 
         {/* Google Analytics */}
