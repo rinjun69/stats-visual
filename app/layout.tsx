@@ -7,6 +7,9 @@ const GA_ID = "G-S6NPCHD98X";
 export const metadata: Metadata = {
   title: "統計ビジュアル学習",
   description: "統計検定2級の概念をインタラクティブに学ぶ",
+  verification: {
+    google: "hEH2nxsfAuXwWyNNQk8lD3hWF7pVTcWyHsJNf4O3cQs",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
