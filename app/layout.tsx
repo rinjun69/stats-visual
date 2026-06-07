@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
+
+const GA_ID = "G-S6NPCHD98X";
 
 export const metadata: Metadata = {
   title: "統計ビジュアル学習",
@@ -24,6 +27,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <footer className="text-center text-xs py-4" style={{ color: "var(--text-secondary)" }}>
           統計検定2級レベルの概念をインタラクティブに学ぶ
         </footer>
+
+        {/* Google Analytics */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="ga-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_ID}', { page_path: window.location.pathname });
+          `}
+        </Script>
       </body>
     </html>
   );
