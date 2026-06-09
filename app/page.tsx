@@ -73,6 +73,15 @@ const topics = [
     href: "/topics/bayes",
     ready: true,
   },
+  {
+    id: "zscore",
+    title: "標準化・z スコア・偏差値",
+    subtitle: "Standardization & z-Score",
+    description: "生の値をスライドすると z スコア・偏差値・パーセンタイルが連動。正規曲線の面積で「偏差値 65 は上位何 %？」の正体を可視化。",
+    tags: ["標準化", "z スコア", "偏差値", "パーセンタイル"],
+    href: "/topics/zscore",
+    ready: true,
+  },
 ];
 
 export default function Home() {

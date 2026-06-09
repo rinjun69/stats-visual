@@ -1,5 +1,13 @@
 // Probability mass/density functions for the distribution gallery
 
+// Standard normal CDF Φ(z) — Horner polynomial, max error ≈ 1.5e-7
+export function normalCDF(z: number): number {
+  const t = 1 / (1 + 0.3275911 * Math.abs(z));
+  const poly = t * (0.254829592 + t * (-0.284496736 + t * (1.421413741 + t * (-1.453152027 + t * 1.061405429))));
+  const result = 1 - poly * Math.exp(-z * z);
+  return z >= 0 ? result : 1 - result;
+}
+
 const MAX_FACT = 300;
 const _logFact = new Array(MAX_FACT + 1).fill(0) as number[];
 for (let i = 1; i <= MAX_FACT; i++) _logFact[i] = _logFact[i - 1] + Math.log(i);
