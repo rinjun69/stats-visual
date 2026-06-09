@@ -46,6 +46,15 @@ const topics = [
     href: "/topics/ols",
     ready: true,
   },
+  {
+    id: "distributions",
+    title: "確率分布ギャラリー",
+    subtitle: "Probability Distributions",
+    description: "二項・ポアソン・正規をスライダーで形状変化。「n大・p小で二項→ポアソン」「n大で二項→正規」の収束を重ねて一望。",
+    tags: ["二項分布", "ポアソン分布", "正規分布", "収束"],
+    href: "/topics/distributions",
+    ready: true,
+  },
 ];
 
 export default function Home() {
