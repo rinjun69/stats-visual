@@ -64,6 +64,15 @@ const topics = [
     href: "/topics/lln",
     ready: true,
   },
+  {
+    id: "bayes",
+    title: "ベイズの定理：検査の罠",
+    subtitle: "Bayes' Theorem — Medical Testing",
+    description: "有病率・感度・特異度のスライダーで陽性的中率を直感破壊。「感度 95% の検査が陽性でも、実は…」を面積図と 1000 人グリッドで体感。",
+    tags: ["ベイズの定理", "陽性的中率", "感度・特異度", "検査"],
+    href: "/topics/bayes",
+    ready: true,
+  },
 ];
 
 export default function Home() {
