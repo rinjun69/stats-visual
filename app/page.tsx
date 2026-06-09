@@ -55,6 +55,15 @@ const topics = [
     href: "/topics/distributions",
     ready: true,
   },
+  {
+    id: "lln",
+    title: "大数の法則 vs 中心極限定理",
+    subtitle: "LLN vs CLT",
+    description: "混同されやすい 2 つの定理を対比。LLN は標本平均が 1 点 μ に収束する話、CLT はその分布の形が正規分布になる話。",
+    tags: ["大数の法則", "中心極限定理", "標本平均", "収束"],
+    href: "/topics/lln",
+    ready: true,
+  },
 ];
 
 export default function Home() {
