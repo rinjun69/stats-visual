@@ -28,6 +28,15 @@ const topics = [
     href: "/topics/ht",
     ready: true,
   },
+  {
+    id: "anscombe",
+    title: "相関と可視化",
+    subtitle: "Anscombe's Quartet",
+    description: "まったく同じ相関係数 r でも散布図はぜんぜん違う。要約統計量だけ見ると騙される体験。",
+    tags: ["相関係数", "散布図", "外れ値"],
+    href: "/topics/anscombe",
+    ready: true,
+  },
 ];
 
 export default function Home() {
