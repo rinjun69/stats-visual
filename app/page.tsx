@@ -82,6 +82,15 @@ const topics = [
     href: "/topics/zscore",
     ready: true,
   },
+  {
+    id: "r2",
+    title: "単回帰と決定係数 R²",
+    subtitle: "Simple Regression & R²",
+    description: "点をドラッグして残差の二乗和の変化を体感。TSS = ESS + RSS の分解から「決定係数が何を測っているか」を 3 つのビューで可視化。",
+    tags: ["回帰分析", "決定係数", "残差", "分散分解"],
+    href: "/topics/r2",
+    ready: true,
+  },
 ];
 
 export default function Home() {
