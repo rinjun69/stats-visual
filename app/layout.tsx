@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import Link from "next/link";
+import GAPageTracker from "@/components/GAPageTracker";
 import "./globals.css";
 
 const GA_ID = "G-S6NPCHD98X";
@@ -17,6 +18,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="ja">
       <body className="min-h-screen flex flex-col">
+        <GAPageTracker gaId={GA_ID} />
         <header className="border-b" style={{ borderColor: "var(--border)", background: "var(--surface)" }}>
           <div className="max-w-6xl mx-auto px-4 py-3 flex items-center gap-3">
             <span className="text-lg font-semibold tracking-tight" style={{ color: "var(--text-primary)" }}>

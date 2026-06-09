@@ -37,6 +37,15 @@ const topics = [
     href: "/topics/anscombe",
     ready: true,
   },
+  {
+    id: "ols",
+    title: "最小二乗法",
+    subtitle: "Ordinary Least Squares",
+    description: "点をドラッグして回帰直線の変化を体感。自分で直線を引いて残差二乗和を最小化に挑戦。",
+    tags: ["回帰分析", "残差", "最小二乗"],
+    href: "/topics/ols",
+    ready: true,
+  },
 ];
 
 export default function Home() {
